@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-hierarchical-goal-decomposer"
+version = "0.1.0"
+description = "Recursive goal tree decomposition into verifiable preconditions, actions, and post-invariants"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-hierarchical-goal-decomposer = "agent_hierarchical_goal_decomposer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_hierarchical_goal_decomposer*"]
